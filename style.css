@@ -1,0 +1,265 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #8e44ad;
+  --secondary-color: #9b59b6;
+  --text-color: #333;
+  --background-color: #f3e5f5;
+  --white: #fff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Header and navigation */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+
+.book-now {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-now:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* Main content */
+main {
+  margin-top: 80px;
+  
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* Home section */
+#home {
+  /* background-image: url("https://source.unsplash.com/1600x900/?data,technology"); */
+  background-image: linear-gradient(to left, var(--primary-color) 80%, var(--background-color)20%, url(/public/hero_img_desktop.jpg));
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0;
+  margin: -80px,0,0,0;
+  max-width: none;
+}
+
+#home h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.cta-button {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--text-color);
+  transform: scale(1.05);
+}
+
+/* Services section */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-item i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Staff section */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.staff-member {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.staff-member:hover {
+  transform: scale(1.05);
+}
+
+.staff-member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid var(--primary-color);
+  transition: border-color 0.3s ease;
+}
+
+.staff-member:hover img {
+  border-color: var(--secondary-color);
+}
+
+.staff-member.ceo img {
+  width: 300px;
+  height: 300px;
+}
+
+/* Contact section */
+
+.contactcont
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.formcont
+{
+  padding: 15px;
+  height: 350px;
+  width: 400px;
+  background-color: #9c59b685;
+  border: 2px solid var(--primary-color);
+}
+
+#contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 3px;
+  transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+#contact-form button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  width: 200px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#contact-form button:hover {
+  background-color: var(--text-color);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0;
+}
+
